@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :set_project, only: [:show, :edit, :update, :destroy]
-	
+
 	def index
 		@projects = Project.all
 	end
@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:name, :desription)
+		params.require(:project).permit(:name, :description)
 	end
 
 	def set_project
