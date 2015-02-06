@@ -1,5 +1,8 @@
 <div id="ticket">
 	<div class="page-header">
+		<p id="author">
+			Created by <%= @ticket.author.email %>, <%= time_ago_in_words(@ticket.created_at) %>
+		</p>
 		<h1><%= @project.name %></h1>
 	</div>
 
